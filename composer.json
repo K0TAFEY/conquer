@@ -12,7 +12,13 @@
             "homepage": "https://github.com/K0TAFEY/conquer"
         }
     ],
-    "minimum-stability": "stable",
+    "extra": {
+        "branch-alias": {
+          "dev-master": "1.0.x-dev"
+        }
+      },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "yiisoft/yii2-bootstrap": "*",
         "FortAwesome/Font-Awesome": "*"
