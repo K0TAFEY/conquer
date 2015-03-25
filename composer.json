@@ -1,0 +1,24 @@
+{
+    "name": "conquer/Yii2-widgets",
+    "description": "Conquer widgets",
+    "keywords": ["yii2", "extension", "widget"],
+    "homepage": "https://github.com/K0TAFEY/conquer",
+    "type": "yii2-extension",
+    "license": "BSD 3-Clause",
+    "authors": [
+        {
+            "name": "Andrey Borodulin",
+            "email": "borodulin@gmail.com",
+            "homepage": "https://github.com/K0TAFEY/conquer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "yiisoft/yii2-bootstrap": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "yii\\bootstrap\\": ""
+        }
+    }
+}
