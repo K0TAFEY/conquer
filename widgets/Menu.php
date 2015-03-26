@@ -2,13 +2,9 @@
 
 namespace conquer\widgets;
 
-use yii\helpers\Html;
-use yii\helpers\ArrayHelper;
-use yii\helpers\Url;
 
 class Menu extends \yii\widgets\Menu
 {
-	public static $cssIcon='fa fa-';
 	
 	public $linkTemplate = '<a href="{url}">{icon}<span class="title">{label}</span></a>';
 	
@@ -23,25 +19,7 @@ class Menu extends \yii\widgets\Menu
 	 */
 	protected function renderItem($item)
 	{
-		if (isset($item['icon'])) {
-			$icon='<i class="'.self::$cssIcon.$item['icon'].'"></i>';
-		}else
-			$icon='';
-		if (isset($item['url'])) {
-			$template = ArrayHelper::getValue($item, 'template', $this->linkTemplate);
-	
-			return strtr($template, [
-					'{url}' => Html::encode(Url::to($item['url'])),
-					'{label}' => $item['label'],
-					'{icon}' => $icon,
-			]);
-		} else {
-			$template = ArrayHelper::getValue($item, 'template', $this->labelTemplate);
-	
-			return strtr($template, [
-					'{label}' => $item['label'],
-			]);
-		}
+		$icon=isset($item['icon'])?"<i class=\"fa fa-{$item['icon']}\"></i>":"";
+		return strtr(parent::renderItem($item), ['{icon}' => $icon]);
 	}
-	
 }

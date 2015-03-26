@@ -6,8 +6,7 @@ use yii\helpers\ArrayHelper;
 
 class ActiveField extends \yii\bootstrap\ActiveField
 {
-	public static $cssIcon='fa fa-';
-	
+
 	public $icon=false;
 	
 	/**
@@ -26,7 +25,7 @@ class ActiveField extends \yii\bootstrap\ActiveField
 	public function render($content = null)
 	{
 		if($this->icon){
-			$this->inputTemplate='<div class="input-icon"><i class="'.self::$cssIcon.$this->icon.'"></i>{input}</div>';
+			$this->inputTemplate='<div class="input-icon"><i class="fa fa-'.$this->icon.'"></i>{input}</div>';
 		}
 		return parent::render($content);
 	}
