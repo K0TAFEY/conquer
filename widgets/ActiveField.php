@@ -12,16 +12,6 @@ class ActiveField extends \yii\bootstrap\ActiveField
 	/**
 	 * @inheritdoc
 	 */
-	public function __construct($config = [])
-	{
-		$layoutConfig = $this->createLayoutConfig($config);
-		$config = ArrayHelper::merge($layoutConfig, $config);
-		parent::__construct($config);
-	}
-	
-	/**
-	 * @inheritdoc
-	 */
 	public function render($content = null)
 	{
 		if($this->icon){
@@ -43,17 +33,12 @@ class ActiveField extends \yii\bootstrap\ActiveField
 	protected function createLayoutConfig($instanceConfig)
 	{
 		$config = [
-				'hintOptions' => [
-						'tag' => 'span',
-						'class' => 'help-block',
-				],
-				'errorOptions' => [
-						'tag' => 'span',
-						'class' => 'help-block help-block-error',
-				],
-				'inputOptions' => [
-						'class' => 'form-control',
-				],
+			'hintOptions' => [
+				'tag' => 'span',
+			],
+			'errorOptions' => [
+				'tag' => 'span',
+			],
 		];
 		return ArrayHelper::merge(parent::createLayoutConfig($instanceConfig),$config);
 	}
