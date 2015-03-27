@@ -1,8 +1,8 @@
 <?php
 /**
- * @link https://github.com/K0TAFEY/conquer
+ * @link https://github.com/borodulin/conquer
  * @copyright Copyright (c) 2015 Andrey Borodulin
- * @license https://github.com/K0TAFEY/conquer/blob/master/LICENSE.md
+ * @license https://github.com/borodulin/conquer/blob/master/LICENSE.md
  */
 namespace conquer\widgets;
 
