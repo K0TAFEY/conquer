@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * @link https://github.com/K0TAFEY/conquer
+ * @copyright Copyright (c) 2015 Andrey Borodulin
+ * @license https://github.com/K0TAFEY/conquer/blob/master/LICENSE.md
+ */
 namespace conquer\widgets;
 
 
