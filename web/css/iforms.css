@@ -1,0 +1,25 @@
+.icon-validation .form-group .help-block-error {
+    display: none;
+}
+.icon-validation i.form-control-feedback{
+    line-height: 34px !important;
+}
+.icon-validation .icon-success {
+    display: none;
+    pointer-events: initial;
+}
+.icon-validation .icon-error {
+    color: #a94442 !important;
+    display: none;
+    pointer-events: initial;
+}
+.icon-validation .has-success .icon-success {
+    display: inline-block;
+}
+.icon-validation .has-error .icon-error {
+    display: inline-block;
+}
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
