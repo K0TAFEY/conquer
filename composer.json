@@ -1,9 +1,9 @@
 {
-    "name": "conquer/yii2-widgets",
-    "description": "Conquer widgets",
-    "keywords": ["yii2", "extension", "widget"],
+    "name": "conquer/application",
+    "description": "Conquer Yii2 application",
+    "keywords": ["yii2", "sample", "application"],
     "homepage": "https://github.com/borodulin/conquer",
-    "type": "yii2-extension",
+    "type": "yii2-app",
     "license": "MIT",
     "authors": [
         {
@@ -14,21 +14,50 @@
     ],
     "extra": {
         "branch-alias": {
-          "dev-master": "1.3.1-dev"
+          "dev-master": "1.0.0-dev"
         }
-      },
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,  
     "require": {
     	"php": ">=5.4.0",
+        "yiisoft/yii2": ">=2.0.5",
         "yiisoft/yii2-bootstrap": "*",
-        "bower-asset/font-awesome": "4.3.0",
-        "bower-asset/select2": "3.5.2",        
-        "bower-asset/bootstrap-hover-dropdown": "2.1.3",
-        "bower-asset/bootstrap-modal": "2.2.5",
-        "bower-asset/jquery-slimscroll": "1.3.3"
+        "yiisoft/yii2-swiftmailer": "*",
+        "yiisoft/yii2-authclient": ">=2.0.5",
+        "conquer/gii-modal": "*",
+        "conquer/select2": "*"
     },
-    "autoload": {
-        "psr-4": {
-        	"conquer\\yii2-widgets\\": ""
+    "require-dev": {
+        "yiisoft/yii2-codeception": "*",
+        "yiisoft/yii2-debug": "*",
+        "yiisoft/yii2-gii": "*",
+        "yiisoft/yii2-faker": "*"
+    },
+    "config": {
+        "process-timeout": 1800
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "yii\\composer\\Installer::postCreateProject"
+        ]
+    },
+    "extra": {
+        "yii\\composer\\Installer::postCreateProject": {
+            "setPermission": [
+                {
+                    "runtime": "0777",
+                    "web/assets": "0777",
+                    "yii": "0755"
+                }
+            ],
+            "generateCookieValidationKey": [
+                "config/web.php"
+            ]
+        },
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
         }
     }
 }
